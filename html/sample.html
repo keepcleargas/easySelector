@@ -13,7 +13,7 @@
     <div class="control-group">
         <label class="control-label">本地数据测试:</label>
         <div class="controls">
-            <select class="selector">
+            <select id="localDataTest" class="selector">
 
             </select>
         </div>
@@ -35,6 +35,8 @@
 
 <script type="text/javascript">
     $(document).ready(function () {
+        var options = {data:[[0,'0'],[1,'1']]};
+        $('#localDataTest').easySelector(options);
         $('#ajaxDataTest').easySelector({'url':'http://localhost:8080/mallpal-web/brands/categories'})
     });
 </script>
